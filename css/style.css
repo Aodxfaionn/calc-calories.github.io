@@ -1,0 +1,109 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background: url(/css/img/background.png) no-repeat;
+  background-size: cover;
+}
+
+.none {
+  display: none;
+}
+
+.is-active {
+    display: inline-block;
+}
+
+/* input[type="radio"] {
+    appearance: none;
+} */
+
+
+.main-page {
+  width: 50%;
+  margin: 50px auto;
+  background-color: rgb(254, 254, 254);
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 1px 1px 10px 1px rgb(25, 49, 49);
+  text-align: center;
+}
+
+.main-page__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-page__title:hover {
+    text-shadow: 1px -1px 10px rgb(95, 151, 151);
+  }
+
+.step-one img {
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.step-one img:hover {
+  box-shadow: 1px 1px 10px 1px rgb(95, 151, 151);
+}
+
+.step-two__activity-card {
+    display: flex;
+    cursor: pointer;
+    border: 1px solid rgb(95, 151, 151);
+    margin-bottom: 10px;
+}
+
+
+.step-two__activity-card:hover {
+    box-shadow: 1px 1px 5px 1px  rgb(95, 151, 151);
+}
+
+
+.step-two__activity-card img {
+    margin: auto 25px auto 25px;
+}
+
+.card__text {
+    text-align: left;
+    margin-top: -5px;
+}
+
+.card__text h4{
+margin-bottom: -10px;
+}
+
+.step-three__form {
+    display: flex;
+justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.step-three__form-input {
+    width: 180px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid rgb(95, 151, 151);
+    margin-top: -10px;
+}
+
+.result__info {
+    border: 1px solid rgb(95, 151, 151);
+    margin-bottom: 20px;
+}
+
+.ready-button {
+    cursor: pointer;
+    width: 180px;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid rgb(95, 151, 151);
+    background-color: rgb(218, 244, 244);
+}
+
+.ready-button:hover {
+    box-shadow: 1px 1px 5px 1px  rgb(95, 151, 151);
+}

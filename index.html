@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Калькулятор калорий</title>
+</head>
+
+<body>
+    <main class="main-page">
+        <h2 class="main-page__title">Калькулятор калорий</h2>
+        <div class="about"></div>
+        <section class="step">
+            <div class="step-one slide is-active">
+                <h3 class="step__title">Выберите пол</h3>
+                <input type="radio" name='sex' id="man" value="1">
+                <label for="man"><img src="css/img/man.png" alt="man" width="100px" height="100px"></label>
+                <input type="radio" name='sex' id="woman" value="2">
+                <label for="woman"><img src="css/img/woman.png" alt="woman" width="100px" height="100px"></label>
+                <p><button class="step-one__button ready-button">Далее</button></p>
+            </div>
+            <div class="step-two slide">
+                <h3 class="step__title">Выберите коэффициент активности</h3>
+                <div class="step-two__activity">
+                    <input type="radio" name='activity' id="low" value="1.2">
+                    <label for="low">
+                        <div class="step-two__activity-card">
+                            <img src="css/img/1200.jpg" width="50px" height="50px">
+                            <div class="card__text">
+                                <h4>1.2 - активность практически отсутствует</h4>
+                                <p>Для малоподвижных людей, тренировок мало или они отсутствуют.</p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name='activity' id="light" value="1.375">
+                    <label for="light">
+                        <div class="step-two__activity-card">
+                            <img src="css/img/1375.jpg" width="50px" height="50px">
+                            <div class="card__text">
+                                <h4>1.375 - низкий уровень активности</h4>
+                                <p>Для людей с низкой активностью, легкие тренировки 1-3 раза в неделю или другая
+                                    активность.</p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name='activity' id="middle" value="1.55">
+                    <label for="middle">
+                        <div class="step-two__activity-card">
+                            <img src="css/img/1550.png" width="50px" height="50px">
+                            <div class="card__text">
+                                <h4>1.55 - средний уровень активности</h4>
+                                <p>Для умеренно активных людей: физическая работа средней тяжести или регулярные
+                                    тренировки 3-5 дней в неделю.</p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name='activity' id="intense" value="1.725">
+                    <label for="intense">
+                        <div class="step-two__activity-card">
+                            <img src="css/img/1725.jpg" width="50px" height="50px">
+                            <div class="card__text">
+                                <h4>1.725 - интенсивные нагрузки</h4>
+                                <p>Для очень активных людей: физическая работа полный день или интенсивные тренировки
+                                    6-7 раз в неделю.</p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name='activity' id="high" value="1.9">
+                    <label for="high">
+                        <div class="step-two__activity-card">
+                            <img src="css/img/1900.jpg" width="50px" height="50px">
+                            <div class="card__text">
+                                <h4>1.9 - высокий уровень активности</h4>
+                                <p>Для предельно активных людей: тяжелая физическая работа и интенсивные
+                                    тренировки/занятия спортом.</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <button class="step-two__button ready-button">Далее</button>
+            </div>
+            <div class="step-three slide">
+                <h3 class="step__title">Введите данные</h3>
+                <div class="step-three__form">
+                    <div> <span class="step-three__form-user">Ваш возраст:</span>
+                        <p><input type="number" name='age' step="1" min="1" max="120" class="step-three__form-input"
+                                required></p>
+                    </div>
+                    <div> <span class="step-three__form-user">Ваш рост:</span>
+                        <p><input type="number" name='height' step="1" min="1" max="220" class="step-three__form-input"
+                                required></p>
+                    </div>
+                    <div>
+                        <span class="step-three__form-user">Ваш вес:</span>
+                        <p><input type="number" name='weight' step="1" min="1" max="500" class="step-three__form-input"
+                                required></p>
+                    </div>
+
+
+                </div>
+                <button class="step-three__button ready-button">Узнать расчет</button>
+            </div>
+            <div class="result slide">
+                <h3 class="step__title">Ваш результат</h3>
+                <div class="result">
+                    <p class="result__number"></p>
+                    <div class="result__info">
+                        <h3>Методика расчета</h3>
+                        <p>Формула расчета нормы калорий Миффлина - Сан Жеора разработана в 1990 году и считается на
+                            сегодняшний день самой точной для расчета суточных потребностей в энергии. Формула пришла на
+                            смену созданной еще в 1919 году формулой Харриса-Бенедикта, которая на сегодня считается
+                            устаревшей.</p>
+                        <h4>Для мужчин:</h4>
+                        <p>Базовый метаболизм = (9,99×(вес в кг) + 6,25×(рост в см) – 4,92×(возраст в годах) + 5) *
+                            коэф.активности</p>
+                        <h4>Для женщин:</h4>
+                        <p>Базовый метаболизм = (9,99×(вес в кг) + 6,25×(рост в см) – 4,92×(возраст в годах) – 161) *
+                            коэф.активности</p>
+                    </div>
+                </div>
+                <button class="step-four__button ready-button">Заново!</button>
+            </div>
+        </section>
+    </main>
+    <script src="ts/script.js"></script>
+</body>
+
+</html>
