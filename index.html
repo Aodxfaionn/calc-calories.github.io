@@ -17,21 +17,22 @@
         <h2 class="main-page__title">Калькулятор калорий</h2>
         <div class="about"></div>
         <section class="step">
-            <div class="step-one slide is-active">
+            <div class="step-one slide none is-active">
                 <h3 class="step__title">Выберите пол</h3>
-                <input type="radio" name='sex' id="man" value="1">
-                <label for="man"><img src="css/img/man.png" alt="man" width="100px" height="100px"></label>
+                <input type="radio" name='sex' id="man" value="1" checked>
+                <label for="man"><img src="css/img/man.png" alt="man" width="100px" height="100px" alt="man"></label>
                 <input type="radio" name='sex' id="woman" value="2">
-                <label for="woman"><img src="css/img/woman.png" alt="woman" width="100px" height="100px"></label>
+                <label for="woman"><img src="css/img/woman.png" alt="woman" width="100px" height="100px"
+                        alt="woman"></label>
                 <p><button class="step-one__button ready-button">Далее</button></p>
             </div>
-            <div class="step-two slide">
+            <div class="step-two slide none">
                 <h3 class="step__title">Выберите коэффициент активности</h3>
                 <div class="step-two__activity">
-                    <input type="radio" name='activity' id="low" value="1.2">
+                    <input type="radio" name='activity' id="low" value="1.2" checked>
                     <label for="low">
                         <div class="step-two__activity-card">
-                            <img src="css/img/1200.jpg" width="50px" height="50px">
+                            <img src="css/img/1200.jpg" width="50px" height="50px" alt="activity">
                             <div class="card__text">
                                 <h4>1.2 - активность практически отсутствует</h4>
                                 <p>Для малоподвижных людей, тренировок мало или они отсутствуют.</p>
@@ -41,7 +42,7 @@
                     <input type="radio" name='activity' id="light" value="1.375">
                     <label for="light">
                         <div class="step-two__activity-card">
-                            <img src="css/img/1375.jpg" width="50px" height="50px">
+                            <img src="css/img/1375.jpg" width="50px" height="50px" alt="activity">
                             <div class="card__text">
                                 <h4>1.375 - низкий уровень активности</h4>
                                 <p>Для людей с низкой активностью, легкие тренировки 1-3 раза в неделю или другая
@@ -52,7 +53,7 @@
                     <input type="radio" name='activity' id="middle" value="1.55">
                     <label for="middle">
                         <div class="step-two__activity-card">
-                            <img src="css/img/1550.png" width="50px" height="50px">
+                            <img src="css/img/1550.png" width="50px" height="50px" alt="activity">
                             <div class="card__text">
                                 <h4>1.55 - средний уровень активности</h4>
                                 <p>Для умеренно активных людей: физическая работа средней тяжести или регулярные
@@ -63,7 +64,7 @@
                     <input type="radio" name='activity' id="intense" value="1.725">
                     <label for="intense">
                         <div class="step-two__activity-card">
-                            <img src="css/img/1725.jpg" width="50px" height="50px">
+                            <img src="css/img/1725.jpg" width="50px" height="50px" alt="activity">
                             <div class="card__text">
                                 <h4>1.725 - интенсивные нагрузки</h4>
                                 <p>Для очень активных людей: физическая работа полный день или интенсивные тренировки
@@ -74,7 +75,7 @@
                     <input type="radio" name='activity' id="high" value="1.9">
                     <label for="high">
                         <div class="step-two__activity-card">
-                            <img src="css/img/1900.jpg" width="50px" height="50px">
+                            <img src="css/img/1900.jpg" width="50px" height="50px" alt="activity">
                             <div class="card__text">
                                 <h4>1.9 - высокий уровень активности</h4>
                                 <p>Для предельно активных людей: тяжелая физическая работа и интенсивные
@@ -85,28 +86,28 @@
                 </div>
                 <button class="step-two__button ready-button">Далее</button>
             </div>
-            <div class="step-three slide">
+            <div class="step-three slide none">
                 <h3 class="step__title">Введите данные</h3>
-                <div class="step-three__form">
-                    <div> <span class="step-three__form-user">Ваш возраст:</span>
-                        <p><input type="number" name='age' step="1" min="1" max="120" class="step-three__form-input"
-                                required></p>
-                    </div>
-                    <div> <span class="step-three__form-user">Ваш рост:</span>
-                        <p><input type="number" name='height' step="1" min="1" max="220" class="step-three__form-input"
-                                required></p>
-                    </div>
-                    <div>
-                        <span class="step-three__form-user">Ваш вес:</span>
-                        <p><input type="number" name='weight' step="1" min="1" max="500" class="step-three__form-input"
-                                required></p>
-                    </div>
-
-
+                <div>
+                    <form class="step-three__form">
+                        <div> <span class="step-three__form-user">Ваш возраст:</span>
+                            <p><input type="number" name='age' step="1" min="1" max="120" class="step-three__form-input"
+                                    required /></p>
+                        </div>
+                        <div> <span class="step-three__form-user">Ваш рост:</span>
+                            <p><input type="number" name='height' step="1" min="1" max="220"
+                                    class="step-three__form-input" required /></p>
+                        </div>
+                        <div>
+                            <span class="step-three__form-user">Ваш вес:</span>
+                            <p><input required type="number" name='weight' step="1" min="1" max="500"
+                                    class="step-three__form-input" /></p>
+                        </div>
+                        <button type="submit" class="step-three__button ready-button">Узнать расчет</button>
+                    </form>
                 </div>
-                <button class="step-three__button ready-button">Узнать расчет</button>
             </div>
-            <div class="result slide">
+            <div class="result slide none">
                 <h3 class="step__title">Ваш результат</h3>
                 <div class="result">
                     <p class="result__number"></p>

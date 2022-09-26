@@ -10,13 +10,8 @@ body {
 }
 
 .is-active {
-    display: inline-block;
+  display: inline-block;
 }
-
-/* input[type="radio"] {
-    appearance: none;
-} */
-
 
 .main-page {
   width: 50%;
@@ -34,8 +29,8 @@ body {
 }
 
 .main-page__title:hover {
-    text-shadow: 1px -1px 10px rgb(95, 151, 151);
-  }
+  text-shadow: 1px -1px 10px rgb(95, 151, 151);
+}
 
 .step-one img {
   cursor: pointer;
@@ -47,63 +42,62 @@ body {
 }
 
 .step-two__activity-card {
-    display: flex;
-    cursor: pointer;
-    border: 1px solid rgb(95, 151, 151);
-    margin-bottom: 10px;
+  display: flex;
+  cursor: pointer;
+  border: 1px solid rgb(95, 151, 151);
+  margin-bottom: 10px;
 }
-
 
 .step-two__activity-card:hover {
-    box-shadow: 1px 1px 5px 1px  rgb(95, 151, 151);
+  box-shadow: 1px 1px 5px 1px rgb(95, 151, 151);
 }
 
-
 .step-two__activity-card img {
-    margin: auto 25px auto 25px;
+  margin: auto 25px auto 25px;
 }
 
 .card__text {
-    text-align: left;
-    margin-top: -5px;
+  text-align: left;
+  margin-top: -5px;
 }
 
-.card__text h4{
-margin-bottom: -10px;
+.card__text h4 {
+  margin-bottom: -10px;
 }
 
 .step-three__form {
-    display: flex;
-justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .step-three__form-input {
-    width: 180px;
-    height: 30px;
-    font-size: 16px;
-    border: none;
-    border-bottom: 1px solid rgb(95, 151, 151);
-    margin-top: -10px;
+  width: 180px;
+  height: 30px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid rgb(95, 151, 151);
+  margin-top: -10px;
+  text-align: center;
 }
 
 .result__info {
-    border: 1px solid rgb(95, 151, 151);
-    margin-bottom: 20px;
+  border: 1px solid rgb(95, 151, 151);
+  margin-bottom: 20px;
 }
 
 .ready-button {
-    cursor: pointer;
-    width: 180px;
-    height: 40px;
-    font-size: 16px;
-    border: 1px solid rgb(95, 151, 151);
-    background-color: rgb(218, 244, 244);
+  cursor: pointer;
+  width: 180px;
+  height: 40px;
+  font-size: 16px;
+  border: 1px solid rgb(95, 151, 151);
+  background-color: rgb(218, 244, 244);
 }
 
 .ready-button:hover {
-    box-shadow: 1px 1px 5px 1px  rgb(95, 151, 151);
+  box-shadow: 1px 1px 5px 1px rgb(95, 151, 151);
 }

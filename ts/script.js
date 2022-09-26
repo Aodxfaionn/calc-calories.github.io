@@ -1,64 +1,57 @@
+/*Реализация калькулятора*/
 const btnThree = document.querySelector(".step-three__button");
-const sex = document.querySelectorAll('input[name="sex"]');
-const activity = document.querySelectorAll('input[name=activity]');
-const age = document.querySelector('input[name="age"]');
-const height = document.querySelector('input[name="height"]');
-const weight = document.querySelector('input[name="weight"]');
 const result = document.querySelector(".result__number");
-let sum = 0;
 
- const sumCcal = () => {
-for (let who of sex) {
-		if (who.checked) {
-            let sex = who.value;
-            console.log(sex)
-	}
+const sumCcal = () => {
+  const sex = Number(document.querySelector('input[name="sex"]:checked').value);
+  const activity = Number(
+    document.querySelector('input[name="activity"]:checked').value
+  );
+  const age = Number(document.querySelector('input[name="age"]').value);
+  const height = Number(document.querySelector('input[name="height"]').value);
+  const weight = Number(document.querySelector('input[name="weight"]').value);
+  let sum = 0;
 
-    for (let activ of activity) {
-		if (activ.checked) {
-            let activity = activ.value;
-            console.log(activity)
-	}
-    }
- }
-
-}
-
-/* let sum = 
-   return result.innerHTML = sum + 'калорий'
-} */
+  if (sex === 1) {
+    sum = Math.round(
+      (9.99 * weight + 6.25 * height - 4.92 * age + 5) * activity
+    );
+  } else if (sex === 2) {
+    sum = Math.round(
+      (9.99 * weight + 6.25 * height - 4.92 * age - 161) * activity
+    );
+  }
+  return (result.innerHTML = `Универсальная норма - ${sum} ккал`);
+};
 
 btnThree.addEventListener("click", sumCcal);
 
+/*Реализация переключателя слайдов*/
 
-/* let slides = Array.from(document.querySelectorAll(".slide"));
-let buttons = Array.from(document.querySelectorAll(".ready-button"));
+const slideOne = document.querySelector(".step-one");
+const slides = document.querySelectorAll(".slide");
+const buttons = document.querySelectorAll(".ready-button");
 
-const clearActiveClass = (element, className = "is-active") => {
-  element.find((item) => item.className.remove("${ className }"));
+const clickBtn = () => {
+  let slideActiv = document.querySelector(".is-active");
+  let newActiv = document.querySelector(".is-active").nextElementSibling;
+  if (newActiv == null) {
+    clearClass(slideActiv);
+    addClass(slideOne);
+  } else {
+    addClass(newActiv);
+    clearClass(slideActiv);
+  }
 };
 
-const addActiveClass = (element, className = "is-active") => {
-  element.find((item) => item.className.add("${ className }"));
+const clearClass = (elem) => {
+  elem.classList.remove("is-active");
 };
 
-const clickBtn = (item, index) => {
-  clearActiveClass(slides);
-  addActiveClass(slides);
+const addClass = (elem) => {
+  elem.classList.add("is-active");
 };
 
 for (button of buttons) {
   button.addEventListener("click", clickBtn);
 }
- let btnOne = document.querySelector(".step-one__button");
-let btnTwo = document.querySelector(".step-two__button");
-let btnThree = document.querySelector(".step-three__button");
-let btnFour = document.querySelector(".step-four__button");
-
-btnOne.addEventListener('click', function() {
- for (slide of slides) {
-    slide.classList.toggle('none')
-    console.log(slide)
- }
-}) */
-
