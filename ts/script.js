@@ -28,9 +28,8 @@ btnThree.addEventListener("click", sumCcal);
 
 /*Реализация переключателя слайдов*/
 
-const slideOne = document.querySelector(".step-one");
-const slides = document.querySelectorAll(".slide");
 const buttons = document.querySelectorAll(".ready-button");
+const slideOne = document.querySelector(".step-one");
 
 const clickBtn = () => {
   let slideActiv = document.querySelector(".is-active");
