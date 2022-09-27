@@ -21,7 +21,7 @@ const sumCcal = () => {
       (9.99 * weight + 6.25 * height - 4.92 * age - 161) * activity
     );
   }
-  return (result.innerHTML = `Универсальная норма - ${sum} ккал`);
+  return (result.innerHTML = `Универсальная норма составляет ${sum} ккал`);
 };
 
 btnThree.addEventListener("click", sumCcal);
@@ -30,13 +30,14 @@ btnThree.addEventListener("click", sumCcal);
 
 const buttons = document.querySelectorAll(".ready-button");
 const slideOne = document.querySelector(".step-one");
+const btnFour = document.querySelector(".step-four__button");
 
 const clickBtn = () => {
   let slideActiv = document.querySelector(".is-active");
   let newActiv = document.querySelector(".is-active").nextElementSibling;
   if (newActiv == null) {
-    clearClass(slideActiv);
     addClass(slideOne);
+    clearClass(slideActiv);
   } else {
     addClass(newActiv);
     clearClass(slideActiv);

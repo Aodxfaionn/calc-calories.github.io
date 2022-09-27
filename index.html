@@ -88,23 +88,21 @@
             </div>
             <div class="step-three slide none">
                 <h3 class="step__title">Введите данные</h3>
-                <div>
-                    <form class="step-three__form">
+                <div class="step-three__form">
                         <div> <span class="step-three__form-user">Ваш возраст:</span>
                             <p><input type="number" name='age' step="1" min="1" max="120" class="step-three__form-input"
-                                    required /></p>
+                                    required></p>
                         </div>
                         <div> <span class="step-three__form-user">Ваш рост:</span>
                             <p><input type="number" name='height' step="1" min="1" max="220"
-                                    class="step-three__form-input" required /></p>
+                                    class="step-three__form-input" required></p>
                         </div>
                         <div>
                             <span class="step-three__form-user">Ваш вес:</span>
                             <p><input required type="number" name='weight' step="1" min="1" max="500"
-                                    class="step-three__form-input" /></p>
+                                    class="step-three__form-input"  required></p>
                         </div>
                         <button type="submit" class="step-three__button ready-button">Узнать расчет</button>
-                    </form>
                 </div>
             </div>
             <div class="result slide none">
@@ -129,7 +127,7 @@
             </div>
         </section>
     </main>
-    <script src="ts/script.js"></script>
+    <script src="script/script.js"></script>
 </body>
 
 </html>

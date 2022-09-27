@@ -1,7 +1,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
-  background: url(/css/img/background.png) no-repeat;
+  background: url(../css/img/background.png) no-repeat;
   background-size: cover;
 }
 
@@ -89,7 +89,7 @@ body {
   margin-bottom: 20px;
 }
 
-.ready-button {
+.ready-button, .step-four__button {
   cursor: pointer;
   width: 180px;
   height: 40px;
@@ -98,6 +98,7 @@ body {
   background-color: rgb(218, 244, 244);
 }
 
-.ready-button:hover {
+.ready-button:hover,
+.step-four__button:hover {
   box-shadow: 1px 1px 5px 1px rgb(95, 151, 151);
 }
